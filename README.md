@@ -17,7 +17,7 @@
     집꾸미기 집소개 기능에 포함되어 있는 사진과 가구 정보를 조합하는 컴포넌트를 구현하는 프로젝트입니다.
     <br />
     <br />
-    <a href="https://hungry-meitner-18800a.netlify.app"><strong>배포 링크</strong></a>
+<!--     <a href="https://hungry-meitner-18800a.netlify.app"><strong>배포 링크</strong></a> -->
   </p>
 </div>
 
@@ -30,13 +30,15 @@
 
 ## 📚 프로젝트 소개
 
-- 프로젝트 소개 1
+![스크린샷 2022-01-31 오후 7 08 39](https://user-images.githubusercontent.com/65898861/151775224-3c5329b1-b396-47c5-b2de-4cef743806df.png)
+
+<!-- - 프로젝트 소개 1
 
   (gif 등 이미지)
 
 - 프로젝트 소개 2
 
-  (gif 등 이미지)
+  (gif 등 이미지) -->
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -79,7 +81,7 @@ npm install npm@latest -g
 
 1. Repo를 clone한다
    ```sh
-   git clone https://github.com/gml9812/wanted-frontend-pre-on-boarding-mission.git
+   git clone https://github.com/seoysauce/wanted_ggumim_furniture
    ```
 2. NPM pakage들을 설치한다
    ```sh
