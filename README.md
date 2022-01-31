@@ -1,46 +1,113 @@
-# Getting Started with Create React App
+<div id="top"></div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- PROJECT SHIELDS -->
+<div align='center'>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
+  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=blue"/>
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
+</div>
 
-## Available Scripts
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
 
-In the project directory, you can run:
+  <h3 align="center">원티드 집꾸미기 과제</h3>
 
-### `npm start`
+  <p align="center">
+    집꾸미기 집소개 기능에 포함되어 있는 사진과 가구 정보를 조합하는 컴포넌트를 구현하는 프로젝트입니다.
+    <br />
+    <br />
+    <a href="https://hungry-meitner-18800a.netlify.app"><strong>배포 링크</strong></a>
+  </p>
+</div>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<br>
+<br>
+<br>
+<br>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<!-- 프로젝트 소개 -->
 
-### `npm test`
+## 📚 프로젝트 소개
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 프로젝트 소개 1
 
-### `npm run build`
+  (gif 등 이미지)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- 프로젝트 소개 2
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  (gif 등 이미지)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-### `npm run eject`
+<hr>
+<br>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<!-- 구현한 기능 -->
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🎯 구현한 기능
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- [x] 가구 정보 tool tip 구현
+  - [x] 돋보기를 클릭하면 상품정보 tool tip 출력되면서 돋보기 버튼이 닫기 버튼으로 변경
+  - [x] 닫기 버튼을 클릭하면 tool tip을 없애고 돋보기 버튼으로 변경
+  - [x] tool tip은 하나만 노출 (새로운 가구 선택하면 새로 클릭한 tool tip만 노출)
+  - [x] 입점 여부에 따른 가구 정보 표시
+- [x] 하단 상품목록 구현
+  - [x] 선택된 가구 표시 기능
+  - [x] 할인율 표시
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-## Learn More
+<hr>
+<br>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<!-- 설치 및 실행 -->
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📦 설치 및 실행
+
+배포 링크가 동작하지 않을 때 local에서 프로젝트를 실행하는 방법입니다.
+
+### Prerequisites
+
+1. npm
+
+```sh
+npm install npm@latest -g
+```
+
+### Installation
+
+1. Repo를 clone한다
+   ```sh
+   git clone https://github.com/gml9812/wanted-frontend-pre-on-boarding-mission.git
+   ```
+2. NPM pakage들을 설치한다
+   ```sh
+   npm install
+   ```
+3. localhost에서 프로젝트를 실행한다
+   ```sh
+   npm start
+   ```
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<hr>
+<br>
+
+<!-- 프로젝트 구조 -->
+
+## 🗂 디렉토리 구조
+
+```bash
+├── public
+│   ├── index.html
+├── src
+│   ├── components
+│   ├── hooks
+│   ├── constants
+│   └── utils
+└── some_more_file.xxx
+```
+
+<p align="right">(<a href="#top">back to top</a>)</p>
