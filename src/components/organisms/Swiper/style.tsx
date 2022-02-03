@@ -4,6 +4,7 @@ export const Container = styled.div`
   display: flex;
   width: 800px;
   overflow-x: scroll;
+  cursor: pointer;
 `;
 
 export const BoxWrap = styled.div`

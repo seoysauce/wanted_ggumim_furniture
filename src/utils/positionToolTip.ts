@@ -3,32 +3,30 @@
 interface IPositionProps {
   pointX: number;
   pointY: number;
-  imageWidth: number;
-  imageHeight: number;
+  IMAGE_WIDTH: number;
+  IMAGE_HEIGHT: number;
 }
 
 export const positionToolTip = ({
   pointX,
   pointY,
-  imageWidth,
-  imageHeight,
+  IMAGE_WIDTH,
+  IMAGE_HEIGHT,
 }: IPositionProps): string => {
-  console.log('x, y, width, height', pointX, pointY, imageWidth, imageHeight);
   let verticalStr = '';
   let horizontalStr = '';
 
-  if (pointY * 1.6 <= imageWidth / 2) {
+  if (pointY * 1.6 <= IMAGE_WIDTH / 2) {
     horizontalStr = 'left';
   } else {
     horizontalStr = 'right';
   }
 
-  if (pointX * 1.6 <= imageHeight / 2) {
+  if (pointX * 1.6 <= IMAGE_HEIGHT / 2) {
     verticalStr = 'top';
   } else {
     verticalStr = 'bottom';
   }
-  console.log(verticalStr, horizontalStr);
 
   return `${verticalStr}-${horizontalStr}`;
 };

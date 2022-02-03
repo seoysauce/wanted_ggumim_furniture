@@ -26,7 +26,13 @@ export function Swiper({ productList, clickedId, setClickedId }: ISwiperProps) {
         {productList.map((productInfo) => (
           <S.Box
             key={productInfo.productId}
-            onClick={() => setClickedId(productInfo.productId)}
+            onClick={() =>
+              setClickedId(
+                clickedId === productInfo.productId
+                  ? null
+                  : productInfo.productId,
+              )
+            }
             isClicked={clickedId === productInfo.productId}
           >
             <S.Image

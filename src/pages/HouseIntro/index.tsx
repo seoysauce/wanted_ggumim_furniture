@@ -1,6 +1,5 @@
 import { HouseView, Swiper } from 'components';
 import React, { useEffect, useState } from 'react';
-// import { furniture } from 'data/furniture';
 import { fetchHouseInfo } from 'api/fetchHouseInfo';
 import * as S from './style';
 

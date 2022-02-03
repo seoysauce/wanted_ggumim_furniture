@@ -63,7 +63,7 @@ export const Container = styled.div<{ position: string }>`
   position: absolute;
   ${({ position }) => positionContainer(position)}
   z-index: 10;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.95);
   margin-top: 16px;
 
   &::before {
