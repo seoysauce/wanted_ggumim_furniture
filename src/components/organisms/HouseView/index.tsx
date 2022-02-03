@@ -15,14 +15,18 @@ interface IProductInfo {
 }
 
 interface HouseViewProps {
-  id: number;
   imageUrl: string;
   productList: Array<IProductInfo>;
+  clickedId: number | null;
+  setClickedId: (value: any) => void; // 수정 필요
 }
 
-export function HouseView({ id, imageUrl, productList }: HouseViewProps) {
-  const [clickedId, setClickedId] = useState(null); // 열기 전에 모두 닫는 flag
-
+export function HouseView({
+  imageUrl,
+  productList,
+  clickedId,
+  setClickedId,
+}: HouseViewProps) {
   return (
     <S.ImageContainer>
       <S.Image src={imageUrl} />

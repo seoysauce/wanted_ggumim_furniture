@@ -1,8 +1,10 @@
 import ArrowRight from 'assets/icons/ArrowRight';
 import React from 'react';
+import { positionToolTip } from 'utils';
 import * as S from './style';
 
 export interface ToolTipProps {
+  position: string;
   imageUrl: string;
   priceOriginal: number;
   discountRate: number;
@@ -12,6 +14,7 @@ export interface ToolTipProps {
 }
 
 export function ToolTip({
+  position,
   imageUrl,
   priceOriginal,
   discountRate,
@@ -20,18 +23,17 @@ export function ToolTip({
   priceDiscount,
 }: ToolTipProps) {
   return (
-    <S.Container>
+    <S.Container position={position}>
       <S.Image src={imageUrl} alt={productName} />
       <S.InfoBox>
         <S.Name>{productName}</S.Name>
         <S.PriceRow>
           <S.Price>
-            {discountRate ? (
+            {!outside && discountRate ? (
               <S.DiscountRate>{`${discountRate}%`}</S.DiscountRate>
             ) : (
               <S.PriceSpan>예상가</S.PriceSpan>
             )}
-
             {priceDiscount.toLocaleString()}
           </S.Price>
           <ArrowRight />

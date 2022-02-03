@@ -1,6 +1,7 @@
 import React from 'react';
 import { ToolTip } from 'components';
 import { CIRCLE_MAGNIFIER, CIRCLE_X } from 'constants/imageUrl';
+import { positionToolTip } from 'utils';
 import * as S from './style';
 
 interface IProductInfo {
@@ -18,7 +19,7 @@ interface IProductInfo {
 interface IIconToolTipGroupProps {
   productInfo: IProductInfo;
   clickedId: number | null;
-  setClickedId: (value: any) => void; // 수정 필요!!
+  setClickedId: (value: any) => void; // 수정 필요!
 }
 
 export function IconToolTipGroup({
@@ -38,6 +39,9 @@ export function IconToolTipGroup({
     imageUrl,
   } = productInfo;
 
+  const imageWidth = 800;
+  const imageHeight = 998;
+
   return (
     <S.CircleDiv pointX={pointX} pointY={pointY}>
       {clickedId === productId ? (
@@ -48,6 +52,12 @@ export function IconToolTipGroup({
             onClick={() => setClickedId(null)}
           />
           <ToolTip
+            position={positionToolTip({
+              pointX,
+              pointY,
+              imageWidth,
+              imageHeight,
+            })}
             imageUrl={imageUrl}
             priceOriginal={priceOriginal}
             discountRate={discountRate}
@@ -60,7 +70,15 @@ export function IconToolTipGroup({
         <S.Icon
           alt="circle-magnifier"
           src={CIRCLE_MAGNIFIER}
-          onClick={() => setClickedId(productId)}
+          onClick={() => {
+            positionToolTip({
+              pointX,
+              pointY,
+              imageWidth,
+              imageHeight,
+            });
+            setClickedId(productId);
+          }}
         />
       )}
     </S.CircleDiv>

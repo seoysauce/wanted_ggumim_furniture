@@ -1,20 +1,80 @@
 import styled from 'styled-components';
 import { shadows } from 'styles/theme';
 
-export const Container = styled.div`
+const positionTail = (position: string): string => {
+  switch (position) {
+    case 'top-left':
+      return `
+        top: -8px;
+        left: 34px;
+        width: 12px;
+        height: 8px;`;
+    case 'top-right':
+      return `
+        top: -8px;
+        right: 34px;
+        width: 12px;
+        height: 8px;`;
+    case 'bottom-left':
+      return `
+        bottom: -8px;
+        left: 34px;
+        width: 12px;
+        height: 8px;
+        transform: rotate(180deg);`;
+    case 'bottom-right':
+      return `
+        bottom: -8px;
+        right: 34px;
+        width: 12px;
+        height: 8px;
+        transform: rotate(180deg);`;
+    default:
+      return '';
+  }
+};
+
+const positionContainer = (position: string): string => {
+  switch (position) {
+    case 'top-left':
+      return `top: 28px; left: -20px;`;
+    case 'top-right':
+      return `top: 28px; left: -160px;`;
+    case 'bottom-left':
+      return `bottom: 52px; left: -20px;`;
+    case 'bottom-right':
+      return `bottom: 52px; left: -160px;`;
+    default:
+      return '';
+  }
+};
+
+export const Container = styled.div<{ position: string }>`
+  cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 220px;
   height: 86px;
-  padding: 10px;
+  padding: 8px;
+  color: #4a4a4a;
   border-radius: 7px;
   box-shadow: ${shadows.normal};
   position: absolute;
-  top: 30px;
-  left: 30px;
+  ${({ position }) => positionContainer(position)}
   z-index: 10;
   background-color: white;
+  margin-top: 16px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    ${({ position }) => positionTail(position)}
+    background-image: url(//cdn.ggumim.co.kr/storage/20211118152728RO3OXnhkrC.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 10;
+  }
 `;
 
 export const Image = styled.img`
@@ -29,7 +89,6 @@ export const InfoBox = styled.div`
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  /* background-color: beige; */
   margin-left: 10px;
 `;
 
