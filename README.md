@@ -5,6 +5,7 @@
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
   <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=blue"/>
   <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white" />
 </div>
 
 <!-- PROJECT LOGO -->
@@ -21,24 +22,18 @@
   </p>
 </div>
 
-<br>
-<br>
-<br>
-<br>
 
 <!-- 프로젝트 소개 -->
 
 ## 📚 프로젝트 소개
 
-![스크린샷 2022-01-31 오후 7 08 39](https://user-images.githubusercontent.com/65898861/151775224-3c5329b1-b396-47c5-b2de-4cef743806df.png)
-
-<!-- - 프로젝트 소개 1
+- 가구 정보 tool tip 구현
 
   (gif 등 이미지)
 
-- 프로젝트 소개 2
+- 상품 목록
 
-  (gif 등 이미지) -->
+  (gif 등 이미지)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -71,23 +66,22 @@
 
 ### Prerequisites
 
-1. npm
-
-```sh
-npm install npm@latest -g
-```
+1. npm을 설치합니다.
+   ```sh
+   npm install npm@latest -g
+   ```
 
 ### Installation
 
-1. Repo를 clone한다
+1. 레포지토리를 clone합니다.
    ```sh
    git clone https://github.com/seoysauce/wanted_ggumim_furniture
    ```
-2. NPM pakage들을 설치한다
+2. npm package들을 설치합니다.
    ```sh
    npm install
    ```
-3. localhost에서 프로젝트를 실행한다
+3. localhost에서 프로젝트를 실행합니다.
    ```sh
    npm start
    ```
@@ -102,14 +96,22 @@ npm install npm@latest -g
 ## 🗂 디렉토리 구조
 
 ```bash
+.
 ├── public
-│   ├── index.html
-├── src
-│   ├── components
-│   ├── hooks
-│   ├── constants
-│   └── utils
-└── some_more_file.xxx
+│   └── index.html
+└── src
+    ├── App.tsx
+    ├── api           # api 관련 함수
+    ├── assets        # icon, image, font 등
+    ├── components    # atomic design에 따른 컴포넌트
+    │   ├── atoms
+    │   ├── molecules
+    │   └── organisms
+    ├── constants
+    ├── data          # mock-data
+    ├── pages         # 전체 페이지 컴포넌트
+    ├── styles        # global-style
+    └── utils
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
