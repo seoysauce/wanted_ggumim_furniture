@@ -26,7 +26,9 @@ module.exports = {
     'import/extensions': 0,
     'react/prop-types': 0,
     'import/prefer-default-export': 0,
-    'react/no-unused-prop-types': 0, // 임시
+    'react/no-unused-prop-types': 0,
+    '@typescript-eslint/no-unused-vars': 0,
+    '@typescript-eslint/no-explicit-any': 0,
     'react/jsx-filename-extension': [
       2,
       { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
