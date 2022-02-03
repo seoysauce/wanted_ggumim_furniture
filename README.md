@@ -18,7 +18,7 @@
     집꾸미기 집소개 기능에 포함되어 있는 사진과 가구 정보를 조합하는 컴포넌트를 구현하는 프로젝트입니다.
     <br />
     <br />
-<!--     <a href="https://hungry-meitner-18800a.netlify.app"><strong>배포 링크</strong></a> -->
+    <a href="https://seoysace-wanted-ggumim-furniture.netlify.app"><strong>배포 링크</strong></a>
   </p>
 </div>
 
@@ -29,11 +29,13 @@
 
 - 가구 정보 tool tip 구현
 
-  (gif 등 이미지)
+![툴팁](https://user-images.githubusercontent.com/65898861/152437551-e27f4fd7-870c-4c6c-abeb-25f67eb69471.gif)
+
 
 - 상품 목록
 
-  (gif 등 이미지)
+![상품 목록](https://user-images.githubusercontent.com/65898861/152437404-a051dc7c-284d-4c34-9729-c473dac87fb2.gif)
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
