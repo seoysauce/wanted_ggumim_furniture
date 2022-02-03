@@ -14,17 +14,29 @@ interface IProductInfo {
 }
 
 interface ISwiperProps {
-  id: number;
   productList: Array<IProductInfo>;
+  clickedId: number | null;
+  setClickedId: (value: any) => void; // 수정 필요
 }
 
-export function Swiper({ id, productList }: ISwiperProps) {
+export function Swiper({ productList, clickedId, setClickedId }: ISwiperProps) {
   return (
     <S.Container>
       <S.BoxWrap>
         {productList.map((productInfo) => (
-          <S.Box key={productInfo.productId}>
-            <S.Image src={productInfo.imageUrl} />
+          <S.Box
+            key={productInfo.productId}
+            onClick={() => setClickedId(productInfo.productId)}
+            isClicked={clickedId === productInfo.productId}
+          >
+            <S.Image
+              image={productInfo.imageUrl}
+              isClicked={clickedId === productInfo.productId}
+            >
+              {productInfo.discountRate ? (
+                <S.DiscountBadge>{`${productInfo.discountRate}%`}</S.DiscountBadge>
+              ) : null}
+            </S.Image>
           </S.Box>
         ))}
       </S.BoxWrap>
